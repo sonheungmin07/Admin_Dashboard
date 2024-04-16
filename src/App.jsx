@@ -5,13 +5,14 @@ import "./App.css";
 import Sidebar from "./components/Layout/Sidebar";
 import Dashboardview from "./components/Layout/Dashboardview";
 import { Outlet } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import UserManagement from "./page/user/UserManagement";
 
 function App() {
   return (
     <div className="flex items-stretch">
-      <div className="basis-[12%] h-full  ">
+      <div className="basis-[12%]  h-full ">
         <Sidebar />
       </div>
       <div className="basis-[88%] ">
@@ -20,6 +21,7 @@ function App() {
           <Outlet></Outlet>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 }

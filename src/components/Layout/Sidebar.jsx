@@ -1,7 +1,6 @@
 // import React from 'react'
 import {
   FaTachometerAlt,
-  FaRegSun,
   FaChevronRight,
   FaWrench,
   FaStickyNote,
@@ -9,6 +8,7 @@ import {
   FaRegCalendarAlt,
   FaChevronLeft,
   FaBolt,
+  FaRegUser,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -34,7 +34,7 @@ const Sidebar = () => {
         </p>
         <div className="flex items-center justify-between gap-[10px] py-[15px] cursor-pointer">
           <div className="flex items-center gap-[10px]">
-            <FaRegSun color="white" />
+            <FaRegUser color="white" />
             <Link to="/user">
               <p className="text-[14px] leading-[20px] font-normal text-white">
                 Users
@@ -46,9 +46,11 @@ const Sidebar = () => {
         <div className="flex items-center justify-between gap-[10px] py-[15px] cursor-pointer">
           <div className="flex items-center gap-[10px]">
             <FaRegChartBar color="white" />
-            <p className="text-[14px] leading-[20px] font-normal text-white">
-              Charts
-            </p>
+            <Link to="/category">
+              <p className="text-[14px] leading-[20px] font-normal text-white">
+                Category
+              </p>
+            </Link>
           </div>
           <FaChevronRight color="white" />
         </div>
